@@ -20,6 +20,12 @@ namespace ReactivehubSDK.service
         /// <returns>Task<HttpResponseMessage></returns>
         public ReactivehubClient(String clientKey, String clientSecret, String ns)
         {
+            if (String.IsNullOrEmpty(clientKey.Trim())
+                || String.IsNullOrEmpty(clientSecret.Trim())
+                || String.IsNullOrEmpty(ns.Trim()))
+            {
+                throw new ArgumentException("Parameter empty or null is not valid to initialize the client");
+            }
             this.clientConfig = new ClientConfig(clientKey, clientSecret, ns);
         }
 
