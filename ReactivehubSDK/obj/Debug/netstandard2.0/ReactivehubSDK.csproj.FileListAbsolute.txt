@@ -1,0 +1,9 @@
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/bin/Debug/netstandard2.0/ReactivehubSDK.deps.json
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/bin/Debug/netstandard2.0/ReactivehubSDK.dll
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/bin/Debug/netstandard2.0/ReactivehubSDK.pdb
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/obj/Debug/netstandard2.0/ReactivehubSDK.csprojAssemblyReference.cache
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/obj/Debug/netstandard2.0/ReactivehubSDK.csproj.CoreCompileInputs.cache
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/obj/Debug/netstandard2.0/ReactivehubSDK.AssemblyInfoInputs.cache
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/obj/Debug/netstandard2.0/ReactivehubSDK.AssemblyInfo.cs
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/obj/Debug/netstandard2.0/ReactivehubSDK.dll
+/home/luizcaciatori/RiderProjects/ReactivehubSDK/ReactivehubSDK/obj/Debug/netstandard2.0/ReactivehubSDK.pdb
