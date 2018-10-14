@@ -5,7 +5,7 @@ The reactivehub.io .NET-Core SDK implements the methods to publish in [Event](ht
 ## Installation
 
 Via Nuget
-``` PM> Install-Package ReactivehubSDK ```
+``` PM> Install-Package Reactivehub -Version 1.0.0 ```
 
 ## Usage
 
