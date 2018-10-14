@@ -16,10 +16,11 @@ namespace ReactivehubSDK.service
         /// </summary>
         /// <param name="clientKey"></param>
         /// <param name="clientSecret"></param>
+        /// <param name="ns"></param>
         /// <returns>Task<HttpResponseMessage></returns>
-        public ReactivehubClient(String clientKey, String clientSecret)
+        public ReactivehubClient(String clientKey, String clientSecret, String ns)
         {
-            this.clientConfig = new ClientConfig(clientKey, clientSecret);
+            this.clientConfig = new ClientConfig(clientKey, clientSecret, ns);
         }
 
         /// <summary>
@@ -37,7 +38,7 @@ namespace ReactivehubSDK.service
             httpClient.DefaultRequestHeaders.Add("client_key", clientConfig.ClientKey);
             httpClient.DefaultRequestHeaders.Add("client_secret", clientConfig.ClientSecret);
           
-            var URL = $"https://api.reactivehub.io/event/{eventName}";
+            var URL = $"https://{clientConfig.Namespace}.reactivehub.io/event/{eventName}";
             
             Console.WriteLine($"Calling HTTP Resource: Method: POST / URL: {URL} with Payload: {payload}");
                 

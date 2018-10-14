@@ -14,10 +14,16 @@ namespace ReactivehubSDK.model
         /// </summary>
         public String ClientSecret { get; }
 
-        public ClientConfig(string clientKey, string clientSecret)
+        /// <summary>
+        /// Client Secret of reactivehub.io Account
+        /// </summary>
+        public String Namespace { get; }
+
+        public ClientConfig(string clientKey, string clientSecret, String ns)
         {
             ClientKey = clientKey;
             ClientSecret = clientSecret;
+            Namespace = ns;
         }
     }
 }
