@@ -15,7 +15,7 @@ Initialize the config with your Client Key, Client Secret and Namespace
 var client = new ReactivehubClient("<you-client-key>", "<your-client-secret>", "<namespace>");
 ```
 
-In ```PostEvent``` send the first parameter is the ```Name``` of the [Event](https://docs.reactivehub.io/guide/events) and the second parameter is the ```Payload``` that should be pass as ```String``` 
+In ```PostEvent``` the first parameter is the ```Name``` of the [Event](https://docs.reactivehub.io/guide/events) and the second parameter is the ```Payload``` that should be passed as a ```String``` 
 
 ```
 var result = client.PostEvent("<your-event-name>", "<your-payload>");
