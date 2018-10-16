@@ -12,7 +12,7 @@ Via Nuget
 Initialize the config with your Client Key, Client Secret and Namespace 
 
 ```
-var client = new ReactivehubClient("<you-client-key>", "<your-client-secret>", "<namespace>");
+var client = new ReactivehubClient("<you-client-key>", "<your-client-secret>", "<team-name>");
 ```
 
 In ```PostEvent``` the first parameter is the ```Name``` of the [Event](https://docs.reactivehub.io/guide/events) and the second parameter is the ```Payload``` that should be passed as a ```String``` 
