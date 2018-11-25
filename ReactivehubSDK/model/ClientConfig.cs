@@ -19,11 +19,11 @@ namespace ReactivehubSDK.model
         /// </summary>
         public String Namespace { get; }
 
-        public ClientConfig(string clientKey, string clientSecret, String ns)
+        public ClientConfig(String teamName, String clientKey, String clientSecret)
         {
             ClientKey = clientKey;
             ClientSecret = clientSecret;
-            Namespace = ns;
+            Namespace = teamName;
         }
     }
 }

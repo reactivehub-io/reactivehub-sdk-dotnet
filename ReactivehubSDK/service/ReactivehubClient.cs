@@ -10,23 +10,23 @@ namespace ReactivehubSDK.service
     public class ReactivehubClient
     {
         private ClientConfig clientConfig;
-        
+
         /// <summary>
         /// Initialize the client
         /// </summary>
+        /// <param name="teamName"></param>
         /// <param name="clientKey"></param>
         /// <param name="clientSecret"></param>
-        /// <param name="ns"></param>
         /// <returns>Task<HttpResponseMessage></returns>
-        public ReactivehubClient(String clientKey, String clientSecret, String ns)
+        public ReactivehubClient(String teamName, String clientKey, String ClientSecret)
         {
             if (String.IsNullOrEmpty(clientKey.Trim())
                 || String.IsNullOrEmpty(clientSecret.Trim())
-                || String.IsNullOrEmpty(ns.Trim()))
+                || String.IsNullOrEmpty(teamName.Trim()))
             {
                 throw new ArgumentException("Parameter empty or null is not valid to initialize the client");
             }
-            this.clientConfig = new ClientConfig(clientKey, clientSecret, ns);
+            this.clientConfig = new ClientConfig(clientKey, clientSecret, teamName);
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace ReactivehubSDK.service
         /// <param name="eventName"></param>
         /// <param name="payload"></param>
         /// <returns>Task<HttpResponseMessage></returns>
-        public async Task<HttpResponseMessage> PostEvent(String eventName, String payload)
+        public async Task<HttpResponseMessage> PublishEvent(String eventName, String payload)
         {
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Accept.Add(
@@ -43,15 +43,15 @@ namespace ReactivehubSDK.service
             );
             httpClient.DefaultRequestHeaders.Add("client_key", clientConfig.ClientKey);
             httpClient.DefaultRequestHeaders.Add("client_secret", clientConfig.ClientSecret);
-          
+
             var URL = $"https://{clientConfig.Namespace}.reactivehub.io/event/{eventName}";
-            
+
             Console.WriteLine($"Calling HTTP Resource: Method: POST / URL: {URL} with Payload: {payload}");
-                
+
             var stringContent = new StringContent(payload, Encoding.UTF8,"application/json");
 
             return await httpClient.PostAsync(URL, stringContent);
         }
-        
+
     }
 }
