@@ -1,6 +1,6 @@
 # reactivehub.io .NET-Core SDK
 
-The reactivehub.io .NET-Core SDK implements the methods to publish in [Event](https://docs.reactivehub.io/guide/events) api 
+The reactivehub.io .NET-Core SDK implements the methods to publish in [Event](https://docs.reactivehub.io/guide/events) api
 
 ## Installation
 
@@ -9,16 +9,16 @@ Via Nuget
 
 ## Usage
 
-Initialize the config with your Client Key, Client Secret and Namespace 
+Initialize the config with your Client Key, Client Secret and Namespace
 
 ```
-var client = new ReactivehubClient("<you-client-key>", "<your-client-secret>", "<team-name>");
+var client = new ReactivehubClient("<team-name>", "<you-client-key>", "<your-client-secret>");
 ```
 
-In ```PostEvent``` the first parameter is the ```Name``` of the [Event](https://docs.reactivehub.io/guide/events) and the second parameter is the ```Payload``` that should be passed as a ```String``` 
+In ```PublishEvent``` the first parameter is the ```Name``` of the [Event](https://docs.reactivehub.io/guide/events) and the second parameter is the ```Payload``` that should be passed as a ```String```
 
 ```
-var result = client.PostEvent("<your-event-name>", "<your-payload>");
+var result = client.PublishEvent("<your-event-name>", "<your-payload>");
 
 ```
 
